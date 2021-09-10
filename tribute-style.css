@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&display=swap');
+ 
+body {
+    font-family: Kaisei HarunoUmi, sans-serif;
+    background-color: rgb(150, 218, 176);    
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Step 1 - general styling nav and items */
+nav>#item-menu {  
+    background-color: white; 
+    border-radius: 4px;  
+    list-style: none;  
+    display: flex;  
+    align-items:center; 
+    justify-content: center;  
+    box-shadow: -7px 9px 17px 0px #00000017; 
+    padding: 20px;
+    overflow: hidden; 
+
+/* Step 4 - styling nav and items when user clicks CLOSE ICON */
+    transform: translateX(50px);  
+    opacity: 0;  
+    pointer-events: none;  /* when nav disappears, mouse doesn't react and hover on the links */ 
+    transition: 0.5s ease;  
+   }  
+
+/* STEP 2 - styling nav and items when user clicked SHOW ICON */
+nav.show #item-menu {  
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0px);  
+    opacity: 1;  
+    pointer-events: all;  
+}  
+
+/* STEP 3 - styling SHOW and CLOSE ICON */
+.icon {  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-67%);   /* positions vertically the icon (towards top) */
+    right: 20px;  
+    height: 60px;  
+    width: 60px;  
+    border-radius: 50%;  
+    background-color: rgb(255, 255, 255);  
+    background-image: url(https://image.flaticon.com/icons/svg/545/545705.svg);  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-size: 50%;  
+    cursor: pointer;  
+    box-shadow: 0px 0px 17px 0px #00000017;  
+    
+    /* 1) duration of transition - 2) speed curve of transition) */ 
+    transition: 0.7s ease transform; 
+   }  
+
+   .icon.close {  
+    transform: translateY(-45%) rotate(360deg);  
+    background-image: url(https://image.flaticon.com/icons/svg/748/748122.svg);  
+
+   } 
+
+li, a:visited, a:link {       
+    padding: 10px 20px;  
+    text-decoration: none;  
+    color: black;
+    font-size: 16px;  
+    
+   }  
+
+ li, a:hover {
+    background-color: rgb(150, 218, 176);
+    color: black;
+    border-radius: 10%;
+}
+ 
+p {
+    font-family: Kaisei HarunoUmi, sans-serif;
+}
+
+#img-div {
+    margin: 15px 20px 0px 20px;
+    padding: 20px 0px 20px 0px;
+    background-color: black;
+}  
+
+#image {
+    display: block; /* only the image can be on the line */
+    width: 50%;
+    max-width: 100%; /* will keep the shrink as the width of the page shrinks */
+    height: auto; 
+    margin: auto; /* centers the image */
+  }
+
+#img-caption {
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 28%;
+    color: #fff;
+}
+
+#tribute-info {
+    margin: 0px 400px 0px;
+    font-family: Kaisei HarunoUmi, sans-serif;
+}
+
+.timeline {
+    margin: 0px -10px 15px 0px;
+    text-align: left;
+    font-size: 16px;
+}
+
+nav {  
+    position: sticky;
+    top: 0;
+    z-index: 100;
+   }  
+
+.quote {
+    font-size: 16px;
+    width: 580px;
+    text-align: left;
+}
+
+footer {
+    font-size: 18px;
+    text-align: center;
+}
+
+#tribute-link {
+    padding: 0px;
+    color: black;
+    text-decoration: underline;
+    font-size: 18px;
+}
