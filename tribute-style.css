@@ -9,9 +9,47 @@ body {
     margin: 0;
 }
 
-/* Step 1 - general styling nav and items */
-nav>#item-menu {  
-    background-color: white; 
+#myVideo {
+    position: relative;
+    z-index: 0;
+    width: 74.9%; 
+    max-width: 100%;
+    height: auto;   
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: absolute;
+    top: 75.5%;
+    left: 12.9%;
+    margin: -5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 71.2%;
+    padding: 22px;
+    z-index: 1;
+  }
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #fff;
+    border-radius: 2%;
+    color: #000;
+    cursor: pointer;
+  }
+  
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+#item-menu { 
+/* Step 1 - general styling nav and items */ 
+    background-color: #ffffff; 
+    width: 40%;  
     border-radius: 4px;  
     list-style: none;  
     display: flex;  
@@ -19,26 +57,24 @@ nav>#item-menu {
     justify-content: center;  
     box-shadow: -7px 9px 17px 0px #00000017; 
     padding: 20px;
-    overflow: hidden; 
+    overflow: hidden;
+    transition: 0.5s ease-in-out; 
 
-/* Step 4 - styling nav and items when user clicks CLOSE ICON */
-    transform: translateX(50px);  
+/* Step 2 - styling nav and items when user clicks CLOSE ICON */
+    transform: translateX(50px);
     opacity: 0;  
-    pointer-events: none;  /* when nav disappears, mouse doesn't react and hover on the links */ 
-    transition: 0.5s ease;  
+    pointer-events: none;  /* when nav disappears, cursor doesn't react on the links */ 
    }  
 
-/* STEP 2 - styling nav and items when user clicked SHOW ICON */
+/* STEP 3 - styling nav and items when user clicked SHOW ICON */
 nav.show #item-menu {  
     width: 97%;
-    margin-left: auto;
-    margin-right: auto;
     transform: translate(0px);  
     opacity: 1;  
     pointer-events: all;  
 }  
 
-/* STEP 3 - styling SHOW and CLOSE ICON */
+/* STEP 4 - styling SHOW and CLOSE ICON */
 .icon {  
     position: absolute;  
     top: 50%;  
@@ -62,30 +98,26 @@ nav.show #item-menu {
    .icon.close {  
     transform: translateY(-45%) rotate(360deg);  
     background-image: url(https://image.flaticon.com/icons/svg/748/748122.svg);  
-
    } 
 
 li, a:visited, a:link {       
     padding: 10px 20px;  
     text-decoration: none;  
     color: black;
-    font-size: 16px;  
-    
+    font-size: 18px;      
    }  
 
- li, a:hover {
+li, a:hover {
     background-color: rgb(150, 218, 176);
     color: black;
     border-radius: 10%;
 }
  
-p {
-    font-family: Kaisei HarunoUmi, sans-serif;
-}
+p {font-family: Kaisei HarunoUmi, sans-serif;}
 
 #img-div {
-    margin: 15px 20px 0px 20px;
-    padding: 20px 0px 20px 0px;
+    margin: 10px 170px 0px 170px;
+    margin-right: 170px;
     background-color: black;
 }  
 

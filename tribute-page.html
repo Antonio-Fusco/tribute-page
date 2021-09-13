@@ -19,7 +19,6 @@
       crossorigin="anonymous"
     />
 </head>
-<body>
     <nav>  
         <ul id="item-menu">  
             <a href="#Home"><i class="fas fa-home"></i> Home</a>
@@ -28,11 +27,21 @@
             <a href="Login"><i class="fas fa-sign-in-alt"></i> Login</a>  
         </ul>  
         <div class="icon"></div>  
-       </nav>
-    <main id="main">
-        <h1 id="title">Caparezza</h1>
-        <p>The artist who makes your mind travel with his rhymes</p>        
-        
+    </nav>
+
+       <!-- The video -->
+       <div class="container-video">
+            <video autoplay muted loop id="myVideo">
+                <source src="exuvia-video.mp4" type="video/mp4">                
+            </video>
+            <div class="content">
+                <h1>Caparezza</h1>
+                <p>The artist who makes your mind travel with his rhymes</p>            
+                <button id="myBtn" onclick="myFunction()">Pause</button>
+            </div>
+        </div>
+                
+    <main id="main">        
             <figure id="img-div">
                 <img id="image" class="responsive-image"
                 src="https://images-na.ssl-images-amazon.com/images/I/71BCCBEm%2BUL._SL1200_.jpg" 
